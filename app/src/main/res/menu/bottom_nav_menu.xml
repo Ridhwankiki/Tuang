@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationFav"
+        android:title="Favorite"
+        android:text="Favorite"
+        android:titleTextColor="@color/red"
+        android:icon="@drawable/ic_fav"
+    />
+    <item
+        android:id="@+id/navigationHome"
+        android:title="Home"
+        android:titleTextColor="@color/red"
+        android:icon="@drawable/ic_home"
+        />
+    <item
+        android:id="@+id/navigationRandom"
+        android:title="Random"
+        android:titleTextColor="@color/red"
+        android:icon="@drawable/ic_question"
+        />
+
+</menu>
