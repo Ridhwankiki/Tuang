@@ -20,7 +20,7 @@
 <!--            android:exported="false" />-->
 <!--        <activity-->
         <activity
-            android:name=".presentation.home_screen.view.HomeActivity"
+            android:name="com.bdp.tuang.presentation.food_categories_screen.view.FoodCategoriesActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

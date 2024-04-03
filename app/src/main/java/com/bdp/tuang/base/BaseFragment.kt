@@ -7,22 +7,18 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
-abstract class BaseFragment<T : ViewBinding> : Fragment() {
-
+abstract class BaseFragment<T : ViewBinding> : Fragment(){
     private var _binding: T? = null
-    val binding: T
-        get() = _binding ?: throw IllegalStateException("Binding not installed yet!")
-
-    abstract fun inFlateBinding(inFlater: LayoutInflater, container: ViewGroup?): T
-
+    protected val binding: T
+        get() = _binding ?: throw IllegalStateException("Binding not initialized yet.")
+    abstract fun inflateBinding(inflater: LayoutInflater, container: ViewGroup?): T
     abstract fun setupView()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = inFlateBinding(inflater, container)
+        _binding = inflateBinding(inflater, container)
         return binding.root
     }
 

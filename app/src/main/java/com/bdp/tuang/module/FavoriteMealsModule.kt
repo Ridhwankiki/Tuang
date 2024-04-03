@@ -1,8 +1,8 @@
 package com.bdp.tuang.module
 
 import com.bdp.tuang.data.TuangService
-import com.bdp.tuang.data.remote.FoodCategoriesRemoteDatasource
-import com.bdp.tuang.data.remote.FoodCategoriesRemoteDatasourceImpl
+import com.bdp.tuang.data.remote.FavoriteMealsRemoteDatasource
+import com.bdp.tuang.data.remote.FavoriteMealsRemoteDatasourceImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -11,13 +11,13 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-object FoodCategoriesModule {
+object FavoriteMealsModule {
 
     @Singleton
     @Provides
     fun provideMenuDashboardRemoteDatasource(service: TuangService):
-            FoodCategoriesRemoteDatasource {
-        return FoodCategoriesRemoteDatasourceImpl(service)
+            FavoriteMealsRemoteDatasource {
+        return FavoriteMealsRemoteDatasourceImpl(service)
     }
 
 }

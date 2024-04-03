@@ -20,12 +20,11 @@ object NetworkModule {
     fun provideOkHttpClient() = OkHttpClient
         .Builder()
         .build()
-
     @Singleton
     @Provides
     fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit = Retrofit.Builder()
         .addConverterFactory(GsonConverterFactory.create())
-        .baseUrl("https://private-74535-ridhwankiki.apiary-mock.com/")
+        .baseUrl("https://www.themealdb.com")
         .client(okHttpClient)
         .build()
 
